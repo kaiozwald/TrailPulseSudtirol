@@ -1,3 +1,6 @@
+# Copyright (c) 2026 Abdullah Abuhassan <aabuhassan@unibz.it>
+# Licensed under the MIT License — see LICENSE file for details.
+
 import json
 from kafka import KafkaConsumer
 

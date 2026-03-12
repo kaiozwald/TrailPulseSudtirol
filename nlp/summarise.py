@@ -1,3 +1,6 @@
+# Copyright (c) 2026 Abdullah Abuhassan <aabuhassan@unibz.it>
+# Licensed under the MIT License — see LICENSE file for details.
+
 import pandas as pd
 import spacy
 import re
