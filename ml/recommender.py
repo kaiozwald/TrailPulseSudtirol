@@ -3,14 +3,14 @@ import pickle
 import numpy as np
 
 # ── Load model and encoders ──
-with open("model.pkl", "rb") as f:
+with open("ml/model.pkl", "rb") as f:
     automl = pickle.load(f)
-with open("encoder_type.pkl", "rb") as f:
+with open("ml/encoder_type.pkl", "rb") as f:
     le_type = pickle.load(f)
-with open("encoder_location.pkl", "rb") as f:
+with open("ml/encoder_location.pkl", "rb") as f:
     le_location = pickle.load(f)
 
-df = pd.read_csv("activities_enriched.csv")
+df = pd.read_csv("ml/activities_enriched.csv")
 
 FEATURES = [
     "distance_m", "duration_min", "altitude_diff", "altitude_start",

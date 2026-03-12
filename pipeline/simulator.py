@@ -10,7 +10,7 @@ logging.basicConfig(
     level=logging.INFO,
     format="%(asctime)s [%(levelname)s] %(message)s",
     handlers=[
-        logging.FileHandler("simulator.log"),
+        logging.FileHandler("pipeline/simulator.log"),
         logging.StreamHandler()
     ]
 )

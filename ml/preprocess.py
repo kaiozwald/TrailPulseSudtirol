@@ -42,13 +42,13 @@ df["activity_type_enc"] = le_type.fit_transform(df["activity_type"])
 df["location_enc"] = le_location.fit_transform(df["location"])
 
 # ── 6. Save encoders for later use in the recommender ──
-with open("encoder_type.pkl", "wb") as f:
+with open("ml/encoder_type.pkl", "wb") as f:
     pickle.dump(le_type, f)
-with open("encoder_location.pkl", "wb") as f:
+with open("ml/encoder_location.pkl", "wb") as f:
     pickle.dump(le_location, f)
 
 # ── 7. Save cleaned dataset ──
-df.to_csv("activities_clean.csv", index=False)
+df.to_csv("ml/activities_clean.csv", index=False)
 
 print(f"\nCleaned dataset shape: {df.shape}")
 print(f"\nActivity type distribution after cleaning:")

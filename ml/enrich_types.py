@@ -5,7 +5,7 @@ from flaml import AutoML
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import classification_report
 
-df = pd.read_csv("activities_clean.csv")
+df = pd.read_csv("ml/activities_clean.csv")
 
 # ── Step 1: Define known good records as training data ──
 # These are records where we trust the activity type label
@@ -67,6 +67,6 @@ with open("type_classifier.pkl", "wb") as f:
     pickle.dump(type_clf, f)
 
 # Save enriched dataset
-df.to_csv("activities_enriched.csv", index=False)
+df.to_csv("ml/activities_enriched.csv", index=False)
 print(f"\nEnriched dataset saved — {len(df)} records")
 print(f"Type prediction confidence avg: {df['type_prediction_confidence'].mean():.3f}")

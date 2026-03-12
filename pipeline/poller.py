@@ -10,7 +10,7 @@ logging.basicConfig(
     level=logging.INFO,
     format="%(asctime)s [%(levelname)s] %(message)s",
     handlers=[
-        logging.FileHandler("poller.log"),
+        logging.FileHandler("pipeline/poller.log"),
         logging.StreamHandler()
     ]
 )
@@ -20,7 +20,7 @@ API_URL = "https://tourism.api.opendatahub.com/v1/ODHActivityPoi"
 TOPIC = "trail-status-changes"
 POLL_INTERVAL = 60  # seconds
 PAGE_SIZE = 200
-STATE_FILE = "state.json"
+STATE_FILE = "pipeline/state.json"
 
 producer = KafkaProducer(
     bootstrap_servers="localhost:9092",

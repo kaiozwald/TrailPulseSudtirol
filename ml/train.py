@@ -4,7 +4,7 @@ from flaml import AutoML
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import classification_report
 
-df = pd.read_csv("activities_enriched.csv")
+df = pd.read_csv("ml/activities_enriched.csv")
 
 # ── Features and target ──
 FEATURES = [
@@ -44,6 +44,6 @@ print("\nClassification Report:")
 print(classification_report(y_test, y_pred, target_names=["Easy(2)", "Medium(4)", "Hard(6)"]))
 
 # ── Save model ──
-with open("model.pkl", "wb") as f:
+with open("ml/model.pkl", "wb") as f:
     pickle.dump(automl, f)
-print("\nModel saved to model.pkl")
+print("\nModel saved to ml/model.pkl")

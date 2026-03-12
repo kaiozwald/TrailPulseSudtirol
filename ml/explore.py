@@ -57,5 +57,5 @@ if __name__ == "__main__":
     print(f"\nNumerical summary:")
     print(df[["distance_m", "duration_min", "altitude_diff", "altitude_start"]].describe())
 
-    df.to_csv("activities.csv", index=False)
+    df.to_csv("ml/activities.csv", index=False)
     print("\nDataset saved to ml/activities.csv")
